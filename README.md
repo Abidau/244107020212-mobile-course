@@ -1,17 +1,8 @@
-\## Nama
+## Nama
 Naufal Abid Aurizky
 
-
-
-\## NIM
-
+## NIM
 244107020212
 
-
-
-\## Kelas 
-
+## Kelas 
 TI 3G
-
-
-
