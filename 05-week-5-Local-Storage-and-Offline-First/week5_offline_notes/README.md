@@ -4,196 +4,98 @@
 | Nama |  Naufal Abid Aurizky |
 | Kelas | TI - 3G |
 
-## Praktikum 1 — Aplikasi multi-page dengan GoRouter
+## Praktikum 1 - SharedPreferences
 
-pada praktikum satu ini membuat sebuah flutter baru bernama `week3_navigation` yang akan digunakan untuk mempraktikkan navigasi menggunakan gorouter 
+Menyiapkan project
 
-![Screenshot](../week3_navigation/screenshot/prak1.1.png)
+![Screenshot](../week5_offline_notes/screenshot/prak1.1.png)
 
-dan langkah selanjutnya, menambahkan package `go_router` menggunakan perintah dibawah ini agar aplikasi dapat menggunakan sistem routing deklaratif dari gorouter
+![Screenshot](../week5_offline_notes/screenshot/prak1.2.png)
 
-![Screenshot](../week3_navigation/screenshot/prak1.2.png)
+![Screenshot](../week5_offline_notes/screenshot/prak1.3.png)
 
-### Hasil dari Praktikum 1
+## Praktikum 2 0 SQLite dan repository catatan & Praktikum 3 - Cache-first dan antrean sync
 
-membuat struktur folder yang berisi `home_page.dart` dan `detail_page.dart` untuk memisahkan halaman utama dan halaman detail, dengan mendefinisikan gorouter di main.dart dengan route / untuk halaman Home dan route /detail/:id untuk halaman detail yang menerima parameter id tersebut
-
-| Halaman Home | Halaman Detail |
-|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/prak1.home.jpeg) | ![Screenshot](../week3_navigation/screenshot/prak1.detail.jpeg) |
-
-## Praktikum 2 — Aplikasi ToDo dengan Riverpod
-
-membuat project flutter baru bernama `week3_todo` dan menambahkan package `flutter_riverpod` sebagai dependency untuk mengimplementasikan state management
-
-![Screenshot](../week3_navigation/screenshot/prak2.1.png)
-
-![Screenshot](../week3_navigation/screenshot/prak2.2.png)
-
-### Hasil dari Praktikum 2
-
-dari praktikum 2 ini, memahami pengguna Riverpod untuk mengelola state aplikasi dan mengetahui perbedaan penggunaan `ref.watch()` untuk memantau perubahan state dengan `ref.read()` untuk menjalankan aksi pada callback
-
-| Halaman Home | Inputan Todo | Output Todo |
-|:---:|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/prak2.3.jpeg) | ![Screenshot](../week3_navigation/screenshot/prak2.4.jpeg) | ![Screenshot](../week3_navigation/screenshot/prak2.5.jpeg) |
-
-## AsyncValue: loading, error, success
-
-Melalu `AsyncValue`, memahami bahwa kondisi loading, error, dan success dapat dikelola dalam satu state sehinffa UI dapat memberikan tampilan yang sesuai tanpa harus menggunakan beberapa variabel boolean secara terpisah
-
-![Screenshot](../week3_navigation/screenshot/AsyncValue.png)
-
-## Praktikum 3 — Uji ketiga state
-
-1. menjalankan aplikasi dan mengamati bahwa loading ditampilkan selama 2 detik sebelum data produk berhasil ditampilkan
-
-| Loading | Masuk ke halaman utama |
-|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/prak3.1.jpeg) | ![Screenshot](../week3_navigation/screenshot/prak3.2.jpeg) |
-
-2. mengubah sementara method build() dengan `throw Exception('Gagal terhubung ke server')` untuk mensimulasikan kegagalan koneksi ke server
-
-| Before | After | Coba Lagi |
-|:---:|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/prak3.2build()_before.png) | ![Screenshot](../week3_navigation/screenshot/prak3.2build()_after.png) | ![Screenshot](../week3_navigation/screenshot/prak3.2CobaLagi.jpeg) |
-
-3.menekan tombol `coba lagi` sehingga `ref.invalidate(productProvider)` menjalankan kembali provider yang sebelumnya mengalami error
-
-### Kode
-
-| Before | After |
-|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/prak3.3before.png) | ![Screenshot](../week3_navigation/screenshot/prak3.3after.png) |
-
-### Hasil
-
-| Gagal | Loading | Success |
-|:---:|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/prak3.3tombol_cobalagi0.jpeg) | ![Screenshot](../week3_navigation/screenshot/prak3.3tombol_cobalagi1.jpeg) | ![Screenshot](../week3_navigation/screenshot/prak3.3tombol_cobalagi2.jpeg) |
-
-4. mempertahankan data lama atau stale data menampilkan indikator refresh dapat memberikan pengalam pengguna yang lebih baik karena pengguna tetap dapat melihat informasi yang tersedia selama proses pembaruan berlangsung
+| Saat Offline | Memasukkan Catatan | Tidak bisa disingkronkan | Mode Online |
+|:---:|:---:|:---:|:---:|
+| ![Screenshot](../week5_offline_notes/screenshot/prak2-3.1.jpeg) | ![Screenshot](../week5_offline_notes/screenshot/prak2-3.2.jpeg) | ![Screenshot](../week5_offline_notes/screenshot/prak2-3.3.jpeg) | ![Screenshot](../week5_offline_notes/screenshot/prak2-3.4.jpeg) |
 
 ## AI Challenge
 
-| Gagal | Loading | Success |
-|:---:|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/ai.3_error-gagal.jpeg) | ![Screenshot](../week3_navigation/screenshot/ai.4_loading.jpeg) | ![Screenshot](../week3_navigation/screenshot/ai.2_success.jpeg) |
+![Screenshot](../week5_offline_notes/screenshot/ai.1.png)
 
-### 1. Immutable State
-**Status: Lolos**
+![Screenshot](../week5_offline_notes/screenshot/ai.2.1.png)
 
-State dikelola secara immutable. Tidak ditemukan penggunaan `state.add()`
-atau mutasi list secara langsung. Perubahan state dilakukan dengan
-memberikan nilai baru melalui assignment pada `state`.
+![Screenshot](../week5_offline_notes/screenshot/ai.2.2.png)
 
-### 2. Penggunaan ref.watch dan ref.read
-**Status: Lolos**
+![Screenshot](../week5_offline_notes/screenshot/ai.3.png)
 
-`ref.watch(statsProvider)` digunakan di dalam method `build()` untuk
-mengamati perubahan state provider. `ref.read(statsProvider.notifier)`
-digunakan pada callback tombol Retry untuk menjalankan aksi.
+![Screenshot](../week5_offline_notes/screenshot/ai.4.png)
 
-### 3. Penanganan AsyncValue
-**Status: Lolos**
-
-UI menangani tiga kondisi asynchronous:
-- Loading menggunakan `CircularProgressIndicator`.
-- Error menggunakan pesan kesalahan dan tombol Retry.
-- Success menggunakan `ListView.builder` yang menampilkan 3 item statistik.
-
-Tombol Retry mengubah state menjadi `AsyncLoading` dan menjalankan
-kembali proses pengambilan data menggunakan `AsyncValue.guard`.
-
-### 4. Deklarasi Provider
-**Status: Lolos**
-
-Provider menggunakan tipe eksplisit:
-
-`AsyncNotifierProvider<StatsNotifier, List<String>>`
-
-Tidak ditemukan provider statistik yang duplikat.
-
-### 5. Penggunaan API Riverpod
-**Status: Lolos**
-
-Implementasi menggunakan API Riverpod modern dengan `AsyncNotifier`,
-`AsyncNotifierProvider`, dan `ConsumerWidget`. Tidak menggunakan
-`StateProvider`, `StateNotifierProvider` lama, atau Consumer bertingkat
-yang tidak diperlukan.
-
-### 6. Flutter Analyze dan Test
-**Status: Lolos**
-
-Hasil `flutter analyze`:
-
-No issues found!
-
-Hasil `flutter test`:
-
-All tests passed!
-
-Sebanyak 2 unit test berhasil dijalankan, mencakup kondisi success
-dan error pada `StatsNotifier`. 
-
-![Screenshot](../week3_navigation/screenshot/ai.1.jpeg)
-
-## Refactoring dan testing
-
-### Refactoring
-
-1. 
-
-lib/widgets/note_tile.dart
-
-lib/pages/notes_page.dart
-
-
-2. 
-
-#### Kode
-
-| Kode 1 | Kode 2 |
-|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/refactoring2.1.png) | ![Screenshot](../week3_navigation/screenshot/refactoring2.2.png) |
-
-
-#### Hasil
-
-| Checklist | After Checklist |
-|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/refactoring2_checklist.jpeg) | ![Screenshot](../week3_navigation/screenshot/refactoring2_remove.jpeg) |
-
-3. 
-
-![Screenshot](../week3_navigation/screenshot/refactoring3_install.png)
-
-#### Hasil
-
-| ToDo | Statistik |
-|:---:|:---:|
-| ![Screenshot](../week3_navigation/screenshot/refactoring3_todo.jpeg) | ![Screenshot](../week3_navigation/screenshot/refactoring3_statistik.jpeg) |
-
-### Testing
-
-pada impementasi awal terjadi error dikarenakan `find.text('Kerjakan PR minggu 3')` menemukan dua widget, yaitu teks pada Todo yang baru ditambahkan dan teks yang masih terdapat pada `TextField` dialog, yang terjadi karena `tester.pump()` hanya menjalankan satu frame sehingga proses penutupan dialog belum sepenuhnya selesai. Perbaikan dilakukan dengan mengganti `pump()` menjadi `pumpAndSettle()` setelah tombol "Tambah" ditekan. maka dari itu, test menunggu seluruh perubahan UI dan animasi selesai sebelum melakukan assertion
+## testing
 
 #### Before
 
-![Screenshot](../week3_navigation/screenshot/testing_flutter_analyze.png)
-
-![Screenshot](../week3_navigation/screenshot/testing_flutter_test.png)
+![Screenshot](../week5_offline_notes/screenshot/testing-before.png)
 
 #### After
 
-![Screenshot](../week3_navigation/screenshot/testing_success.png)
+Agar tidak terjadi error saya merubah kode pada `note_test.dart` menambahkan Import Provider seperti berikut ini
+
+```
+import 'package:week5_offline_notes/pages/notes_page.dart';
+```
+
+dan memperbaiki pengujian error AsyncNotifier dengan mengganti panggilan .future dengan .notifier.build() untuk menangkap exception dengan tepat pada pengujian error provider
+
+```
+await expectLater(
+  container.read(notesProvider.notifier).build(),
+  throwsA(isA<Exception>()),
+);
+```
 
 ## Refleksi
 
-1. `setState` masih cukup digunakan ketika state hanya dibutuhkan satu widget atau satu halaman, jika state perlu digunakan beberapa halaman a tau widget dan harus terjaga ketika berpindah halaman, maka Riverpod lebih sesuai karena state akan dikelola diluar widget dan dapat diakses oleh widget yang membutuhkan
+1. SharedPreferences dirancang untuk menyimpan nilai primitif kecil seperti boolean, string, int dengan akses key-value sederhana, bukan untuk data koleksi atau list yang kompleks, jika daftar catatan dipaksa disimpan disana yang misalnya sebagai satu string JSON raksasa berisi semua catatan, beberapa hal akan rusak seperti:
 
-2. `context.go` digunakan untuk berpindah ke suatu route dan mengganti lokasi halaman, sedangkan `context.push` digunakan untuk menambahkan halaman baru ke atas stack navigasi, sehingga halaman sebelumnya masih dapat kembali menggunakan tombol back
+- Query dan filter jadi tidak mungkin dilakukan secara efisien. Di project ini saya butuh WHERE dirty = 1 (di countDirty()) dan ORDER BY updated_at DESC (di fetchNotes()). Dengan SharedPreferences, saya harus decode seluruh JSON, lalu filter/sort manual di Dart setiap kali, jauh lebih lambat dan boros memori dibanding query SQL yang sudah dioptimasi oleh SQLite.
 
-3. AsyncValue membantu mencegah bug karena dikelola dalam satu state yang terstruktur. Jika menggunakan tiga boolean terpisah, kombinasi status yang tidak sesuai dapat terjadi, misalnya `isloading` dan `isError` berinilai true. Dengan AsyncValue, aplikasi dapat menangani setiap kondisi menggunakan loading, error, dan data 
+- Update parsial jadi mahal. Untuk mengubah status dirty satu catatan saja (markAllSynced()), dengan SharedPreferences saya harus decode seluruh list, ubah satu elemen, lalu encode dan tulis ulang SELURUH data setiap kali, meskipun yang berubah cuma satu baris. Di SQLite, ini cukup satu UPDATE ... WHERE.
 
-4. beberapa bagian kode yang belum sesuai dengan struktur project dan aturan Riverpod yang digunakan, memperbaiki pengguna `ref.watch dan `ref.read agar sesuai dengan tempat penggunaannya, memastikan state diubah secara immutable, serta memastikan UI menangani kondisi loading, error, dan success. Perbaikan tersebut dilakukan agar kode dapat dijalankan dengan benar, lebih mudah dipahami, dan sesuai dengan konsep yang dipelajari pada praktikum
+- Race condition dan data korup lebih mudah terjadi. Kalau ada dua operasi tulis terjadi hampir bersamaan (misal tambah catatan sambil sync jalan), menulis satu string JSON besar berisiko salah satu operasi menimpa (overwrite) perubahan yang lain, karena tidak ada mekanisme transaksi seperti di SQLite.
+
+- Performa menurun drastis seiring pertumbuhan data. Untuk 1000+ catatan, satu string JSON bisa jadi sangat besar, dan setiap kali aplikasi dibuka, seluruh string ini harus di-decode ke memori sekaligus, beda dengan SQLite yang bisa membaca data secara halaman per halaman (paging) tanpa memuat semuanya ke RAM.
+
+2. Cache-first seperti yang saya terapkan di loadPostsCacheFirst() ini cocok ketika:
+- Data tidak sering berubah dalam hitungan detik (misalnya daftar post JSONPlaceholder yang saya pakai, kontennya statis).
+
+- Prioritas utama adalah pengalaman pengguna yang cepat dan tetap bisa dibaca saat offline, sementara sedikit "basi" (stale) masih bisa diterima.
+
+- Aplikasi tidak membutuhkan update instan begitu data berubah di server, cukup direfresh di background dan pengguna baru melihat data terbaru saat sesi berikutnya.
+
+Strategi lain (network-first atau bahkan realtime atau stream) dibutuhkan ketika:
+- Data berubah sangat cepat dan nilai lama bisa menyesatkan atau merugikan pengguna, contohnya harga saham, kurs mata uang, atau status ketersediaan kursi/tiket. Menampilkan data basi di sini bukan cuma tidak nyaman, tapi bisa menyebabkan keputusan yang salah (misalnya orang membeli berdasarkan harga yang sudah berubah).
+
+- Untuk kasus seperti ini, network-first lebih tepat: selalu coba ambil data terbaru dari server dulu, dan HANYA jatuh ke cache sebagai fallback kalau network gagal (kebalikan dari cache-first).
+
+- Untuk kebutuhan yang lebih ekstrem lagi (perlu update instan tanpa refresh manual), baru dibutuhkan koneksi realtime seperti WebSocket atau stream (seperti yang ditawarkan Drift dengan fitur .watch() nya, dibanding sqflite yang saya pakai sekarang).
+
+3. Alurnya di project ini:
+
+- Saat catatan baru dibuat (addNote()), field dirty langsung diset true dan disimpan ke SQLite. Operasi ini sinkron secara lokal (cepat, karena cuma tulis ke database di perangkat), jadi UI tidak perlu menunggu proses jaringan sama sekali untuk menampilkan catatan baru, pengguna langsung melihat hasilnya.
+
+- Riverpod (lewat notesProvider dan dirtyCountProvider) membaca status dirty ini dan menampilkannya sebagai badge, tanpa proses sync itu sendiri pernah berjalan di titik ini.
+
+- syncNotes() hanya dipanggil terpisah (lewat tombol manual di UI), dan dijalankan sebagai proses async yang tidak memblokir thread utama, sehingga pengguna tetap bisa berinteraksi dengan aplikasi (scroll, tambah catatan lain) sementara proses "upload simulasi" berjalan di background selama 1 detik.
+
+- Setelah sync selesai, saya memanggil ref.invalidate() secara manual untuk memberi tahu UI bahwa data sudah berubah, sehingga badge diperbarui tanpa pengguna perlu me-refresh manual.
+
+Tabel outbox terpisah menjadi perlu ketika:
+- Ada BANYAK jenis operasi yang perlu disinkronkan, bukan cuma "tandai dirty lalu update semua sekaligus" seperti di project ini, tapi juga operasi hapus, edit parsial, atau urutan operasi yang harus dikirim SESUAI URUTAN terjadinya (misal: buat catatan A, lalu edit A, lalu hapus A, kalau hanya pakai dirty flag, informasi "urutan kejadian" ini hilang begitu status jadi dirty = true begitu saja).
+
+- Dibutuhkan retry logic yang lebih canggih (misalnya: coba kirim 3x, kalau gagal terus, catat sebagai failed dan beri tahu pengguna), tabel outbox bisa menyimpan status per-operasi (pending, in-progress, failed, done), sesuatu yang tidak bisa direpresentasikan hanya dengan boolean dirty.
+
+- Sinkronisasi perlu berjalan di background secara terjadwal (misalnya pakai WorkManager di Android), bukan hanya dipicu manual oleh pengguna seperti tombol sync di project ini, tabel outbox memungkinkan proses background tahu persis operasi apa saja yang masih menunggu tanpa harus scan ulang seluruh tabel notes.
+
+4. saya tidak menolak rekomendasi AI karena diverifikasi lewat pengalaman membangun kedua repository, rekomendasi tersebut terkbukti sesuai kebutuhannya. Tetapi ada satu yang perlu diberi catatan, bukan diterima mentah mentah bahwa sqflite "tida native reaktif" sering dianggap sebagai kekurangan besar dibandingkan Drift atau Hive yang punya stream bawaan. Setelah dicoba, saya saya merasa sedikit berlebihan untuk kasus penggunaan skala ini, karena kebutuhan reaktivitas bisa ditangani lewat ref.invalidate() manual di titik yang jelas setelah addNote, deleteNote, sysncNote. Reaktivitas otomatis lewat stream baru terasa dibutuhkan jika banyak sumber perubahan data yang sulit dilacak manual, seperti perubahan dari backgrounf service atau banyak halaman yang saling memengaruhi data yang sama, yang tidak terjadi di project sederhana.
