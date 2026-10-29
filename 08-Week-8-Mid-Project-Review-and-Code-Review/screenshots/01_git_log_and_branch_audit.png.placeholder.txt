@@ -1,0 +1,2 @@
+placeholder for 01_git_log_and_branch_audit.png
+Silakan ganti berkas ini dengan tangkapan layar terminal git log --oneline -15
