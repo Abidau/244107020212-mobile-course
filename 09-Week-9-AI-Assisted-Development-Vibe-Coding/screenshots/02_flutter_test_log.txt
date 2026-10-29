@@ -1,0 +1,28 @@
+﻿00:00 +0: loading C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/add_note_test.dart
+00:00 +0: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/add_note_test.dart: AddNote berhasil menambahkan catatan ketika judul valid
+00:00 +1: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/add_note_test.dart: AddNote mengembalikan ValidationFailure/LocalFailure ketika judul kosong
+00:00 +2: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/format_test.dart: Core Format & Utilities Unit Tests formatRelativeTime returns "Baru saja" for recent timestamps
+00:00 +3: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/format_test.dart: Core Format & Utilities Unit Tests formatRelativeTime returns minutes ago correctly
+00:00 +4: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/format_test.dart: Core Format & Utilities Unit Tests formatRelativeTime returns "Hari ini, HH:mm" on same day
+00:00 +5: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/format_test.dart: Core Format & Utilities Unit Tests formatRelativeTime returns "Kemarin, HH:mm" for yesterday
+00:00 +6: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/format_test.dart: Core Format & Utilities Unit Tests parseRouteId parses valid numeric string and handles edge cases
+00:00 +7: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/format_test.dart: Core Format & Utilities Unit Tests sanitizeText trims and collapses excessive newlines
+00:00 +8: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/get_notes_test.dart: GetNotes meneruskan daftar dari repository
+00:00 +9: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/get_notes_test.dart: GetNotes meneruskan failure tanpa melempar
+00:00 +10: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +11: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +12: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +13: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +14: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +15: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +16: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +17: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +18: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +19: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +20: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:00 +21: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesEmptyState ketika database catatan kosong
+00:01 +22: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan daftar catatan ketika data tersedia
+00:01 +23: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States menampilkan NotesSearchEmptyState ketika pencarian tidak menemukan hasil
+00:01 +24: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States tombol Reset Pencarian mengembalikan seluruh daftar catatan
+00:02 +25: C:/Users/abidau/my_first_app/09-Week-9-AI-Assisted-Development-Vibe-Coding/test/notes_search_widget_test.dart: Widget Test: Notes Page Search & Empty States memfilter catatan secara real-time berdasarkan query yang cocok
+00:02 +26: All tests passed!
