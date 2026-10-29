@@ -1,13 +1,10 @@
 # Laporan Praktikum Minggu 8: Mid Project Review & Code Review
 
-| Parameter | Keterangan |
-| :--- | :--- |
-| **Mata Kuliah** | Pemrograman Mobile Lanjut |
-| **Topik** | Minggu 8 - Mid Project Review, Git Flow, Static Analysis, & Code Review |
-| **Mahasiswa** | Ahmad Bidaus |
-| **Program Studi** | D4 Teknik Informatika, Jurusan Teknologi Informasi |
-| **Institusi** | Politeknik Negeri Malang |
-| **Tautan Codelab** | [Codelab Minggu 8 - Mid Project Review & Code Review](https://jti-polinema.github.io/flutter-codelab/08-minggu-8-mid-project-review-code-review/index.html) |
+|  | Pemrograman Mobile |
+|--|--|
+| NIM |  244107020212|
+| Nama |  Naufal Abid Aurizky |
+| Kelas | TI - 3G |
 
 ---
 
@@ -458,33 +455,7 @@ Folder [`screenshots/`](screenshots/) disediakan untuk memuat seluruh berkas tan
 
 ---
 
-## 11. Cara Menjalankan & Memverifikasi Proyek
-
-Ikuti langkah-langkah berikut untuk menjalankan dan menguji proyek di lingkungan lokal:
-
-```bash
-# 1. Buka folder minggu 8
-cd 08-Week-8-Mid-Project-Review-and-Code-Review
-
-# 2. Unduh seluruh dependensi Flutter
-flutter pub get
-
-# 3. Verifikasi pemformatan kode (harus bersih)
-dart format --output=none --set-exit-if-changed .
-
-# 4. Jalankan static analysis (harus 0 issues)
-flutter analyze
-
-# 5. Jalankan seluruh unit test dan pengujian validasi
-flutter test
-
-# 6. Jalankan aplikasi pada desktop Windows, Web, atau Emulator
-flutter run -d windows
-```
-
----
-
-## 12. Kesimpulan
+## 11. Kesimpulan
 
 Praktikum Minggu 8 (**Mid Project Review & Code Review**) berhasil diselesaikan secara tuntas. Seluruh instrumen kolaborasi profesional—mulai dari strategi branching **Git Flow**, standarisasi **Conventional Commits**, template **Pull Request**, metodologi **Peer Code Review**, otomatisasi **CI / Static Analysis**, hingga **Verifikasi Kritis Saran AI**—telah diterapkan secara nyata pada proyek portofolio.
 
