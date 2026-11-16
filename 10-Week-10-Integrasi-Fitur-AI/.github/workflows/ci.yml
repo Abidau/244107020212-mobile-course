@@ -1,0 +1,40 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [develop, main]
+  push:
+    branches: [develop, main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: |
+          cd 08-Week-8-Mid-Project-Review-and-Code-Review
+          flutter pub get
+
+      - name: Check code formatting
+        run: |
+          cd 08-Week-8-Mid-Project-Review-and-Code-Review
+          dart format --output=none --set-exit-if-changed .
+
+      - name: Static code analysis
+        run: |
+          cd 08-Week-8-Mid-Project-Review-and-Code-Review
+          flutter analyze
+
+      - name: Run unit & domain tests
+        run: |
+          cd 08-Week-8-Mid-Project-Review-and-Code-Review
+          flutter test
